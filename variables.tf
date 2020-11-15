@@ -34,17 +34,16 @@ variable "team" {
 # Networking informations #
 #-------------------------#
 
-variable "address_space" {
-  description = "The address space of the virtual network you want to create"
-  type        = string
-  default     = "10.1.1.0/24"
-}
-
-variable "subnets" {
-  description = "A list containing maps with the subnets to create and associated names"
-  type        = list(map(string))
-  default = [
-    { "name" : "external", "address_prefix" : "10.1.1.0/28" },
-    { "name" : "internal", "address_prefix" : "10.1.1.16/28" }
-  ]
+variable networks {
+  description = "A map containing virtual networks and associated subnets to create"
+  type = map(any)
+  default = {
+    "vnet-1" : {
+      "address_space" : ["10.1.1.0/24"],
+      "subnets" : [
+        { "name" : "external", "address_prefix" : "10.1.1.0/28" },
+        { "name" : "internal", "address_prefix" : "10.1.1.16/28" }
+      ]
+    }
+  }
 }

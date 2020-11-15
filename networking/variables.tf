@@ -1,11 +1,6 @@
-variable "address_space" {
-  description = "The address space of the virtual network you want to create"
-  type        = string
-}
-
-variable "subnets" {
-  description = "A list containing maps with the subnets to create and associated names"
-  type        = list(map(string))
+variable "networks" {
+  description = "A list containing maps with the virtual networks and subnets to create"
+  type = map(any)
 }
 
 variable "location" {

@@ -21,8 +21,7 @@ module "networking" {
   team           = var.team
   env            = var.env
   tags           = local.tags
-  address_space  = var.address_space
-  subnets        = var.subnets
   resource_group = module.resource_group.name
   location       = module.resource_group.location
+  networks       = var.networks
 }
