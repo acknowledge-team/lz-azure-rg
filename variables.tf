@@ -8,6 +8,11 @@ variable "tenant_id" {
   default     = "f9056c40-d204-4118-b01d-bb624708154c"
 }
 
+variable "subscription_id" {
+  description = "Azure subscription id"
+  type        = string
+}
+
 #----------------------#
 # Project informations #
 #----------------------#
