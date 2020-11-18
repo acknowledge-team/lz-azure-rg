@@ -3,7 +3,7 @@ resource "azurerm_virtual_network" "virtual_network" {
   name                = each.key
   location            = var.location
   resource_group_name = var.resource_group
-  address_space       = each.value.vnet
+  address_space       = [ each.value.vnet ]
 
   dynamic "subnet" {
     for_each = toset(each.value.subnets)
