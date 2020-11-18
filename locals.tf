@@ -10,8 +10,4 @@ locals {
     "project" : var.project,
     "team" : var.team
   }
-
-  networks = {
-    for vnet in jsondecode(var.networks) : "vnet-${var.team}-${var.project}-${replace(vnet.vnet, "/", "-")}" => vnet
-  }
 }
