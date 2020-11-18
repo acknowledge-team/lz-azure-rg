@@ -1,6 +1,6 @@
 variable "networks" {
-  description = "A list containing maps with the virtual networks and subnets to create"
-  type = map(any)
+  description = "A string containing a json with the virtual networks and subnets to create within the resource group"
+  type = string
 }
 
 variable "location" {
