@@ -24,4 +24,6 @@ module "networking" {
   resource_group = module.resource_group.name
   location       = module.resource_group.location
   networks       = var.networks
+  client_id      = var.client_id
+  client_secret  = var.client_secret
 }
