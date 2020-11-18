@@ -35,17 +35,3 @@ variable networks {
   description = "A string containing a json with virtual networks and associated subnets to create within the resource group"
   type = string
 }
-
-#-----------------------------------#
-# Azure authentication informations #
-#-----------------------------------#
-
-variable "client_id" {
-  description = "Azure service principal client id"
-  type        = string
-}
-
-variable "client_secret" {
-  description = "Azure service principal client secret"
-  type        = string
-}
