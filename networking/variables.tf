@@ -32,3 +32,13 @@ variable "tags" {
   description = "A map containing all tags to applied to the resource group created"
   type        = map(string)
 }
+
+variable "client_id" {
+  description = "Azure service principal client id"
+  type        = string
+}
+
+variable "client_secret" {
+  description = "Azure service principal client secret"
+  type        = string
+}

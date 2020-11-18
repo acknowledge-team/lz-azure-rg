@@ -35,3 +35,4 @@ variable networks {
   description = "A string containing a json with virtual networks and associated subnets to create within the resource group"
   type = string
 }
+
