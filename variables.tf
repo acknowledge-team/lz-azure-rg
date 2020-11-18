@@ -36,3 +36,16 @@ variable networks {
   type = string
 }
 
+#-----------------------------------#
+# Azure authentication informations #
+#-----------------------------------#
+
+variable "client_id" {
+  description = "Azure service principal client id"
+  type        = string
+}
+
+variable "client_secret" {
+  description = "Azure service principal client secret"
+  type        = string
+}
