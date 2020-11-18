@@ -1,6 +1,6 @@
 resource "azurerm_virtual_network" "virtual_network" {
-  for_each            = tomap(toset(jsondecode(var.networks)))
-  name                = "vnet-${var.team}-${var.project}-${replace(each.value.vnet, "/", "-")}"
+  for_each            = local.networks
+  name                = each.key
   location            = var.location
   resource_group_name = var.resource_group
   address_space       = each.value.vnet
