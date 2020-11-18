@@ -1,15 +1,15 @@
 resource "azurerm_virtual_network" "virtual_network" {
-  for_each            = var.networks
-  name                = "vnet-${var.team}-${var.project}-${each.key}"
+  for_each            = toset(var.networks)
+  name                = "vnet-${var.team}-${var.project}-${replace(each.value.vnet, "/", "-")}"
   location            = var.location
   resource_group_name = var.resource_group
-  address_space       = each.value.address_space
+  address_space       = each.value.vnet
 
   dynamic "subnet" {
-    for_each = each.value.subnets
+    for_each = toset(each.value.subnets)
     content {
-      name           = subnet.value["name"]
-      address_prefix = subnet.value["address_prefix"]
+      name = "subnet-${var.team}-${var.project}-${replace(subnet.value, "/", "-")}"
+      address_prefix = subnet.value
     }
   }
 

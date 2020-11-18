@@ -32,6 +32,6 @@ variable "team" {
 #-------------------------#
 
 variable networks {
-  description = "A map containing virtual networks and associated subnets to create"
-  type = map(any)
+  description = "A list of maps containing virtual networks and associated subnets to create within the resource group"
+  type = list(map(any))
 }
