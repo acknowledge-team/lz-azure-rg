@@ -1,5 +1,5 @@
 locals {
   networks = {
-    for vnet in var.networks : "vnet-${var.team}-${var.project}-${var.env}" => vnet
+    for vnet in jsondecode(var.networks) : "vnet-${var.team}-${var.project}-${var.env}" => vnet
   }
 }
