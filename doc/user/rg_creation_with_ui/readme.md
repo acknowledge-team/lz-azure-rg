@@ -50,10 +50,12 @@ Vous devrez déclarer les variables suivantes sur votre workspace :
 > project
 
 Soit le nom du projet ou du produit sur lequel vous voulez travailler.
+A ajouter en variable Terraform.
 
 > env
 
 Soit le type d'environnement que vous déployez (prod, dev, sandbox).
+A ajouter en variable Terraform.
 
 > team
 
@@ -63,6 +65,7 @@ Vous pouvez saisir "tech" ou le nom du client pour lequel vous travaillez par ex
 > subscription_id
 
 Le nom de la subscription Azure dans laquelle vous souhaitez déployer l'infrastructure.
+A ajouter en variable Terraform.
 
 > networks
 
@@ -70,3 +73,17 @@ La liste des vnets et réseaux à créer dans le groupe de ressources.
 Cette variable doit respecter le format suivant : `[{"vnet" : ["172.16.1.0/24"], "subnets" : ["172.16.1.0/24"]}]`
 
 Il s'agit ici d'un exemple. Remplacez le scope du vnet et la liste des subnets parce que vous souhaitez.
+
+> ARM_TENANT_ID
+
+Une variable d'environnement à ajouter pour définir l'id du tenant dans lequel vous souhaitez réaliser le déploiement.
+
+> ARM_CLIENT_ID
+
+Une variable d'environnement à ajouter pour définir le client id à utiliser pour réaliser la configuration dans Azure.
+Cette variable doit être définie comme sensible.
+
+> ARM_CLIENT_SECRET
+
+Une variable d'environnement à ajouter pour définir le client secret à utiliser pour réaliser la configuration dans Azure.
+Cette variable doit être définie comme sensible.
