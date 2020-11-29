@@ -5,31 +5,31 @@ Le création d'un nouveau groupe de ressources passe dans un premier temps par l
 Pour cela, une fois connecté à Terraform Cloud, accédez à la partie "Workspaces".
 Vous arriverez ainsi sur une page présentant l'ensemble des workspaces provisionnés au sein de l'organisation Acknowledge : 
 
-IMAGE
+![](images/workspaces.png)
 
 Cliquez ensuite sur le bouton "New workspace" pour lancer la création d'un nouveau workspace : 
 
-IMAGE
+![](images/new_workspace.png)
 
 Choisissez d'interfacer votre workspace avec un repository git : 
 
-IMAGE
+![](images/wizard_1.png)
 
 Choisissez GITLAB en tant que VCS : 
 
-IMAGE
+![](images/wizard_2.png)
 
 Vous devrez maintenant sélectionner le projet gitlab que vous souhaitez associer au workspace.
-Pour cela, dans le filtre, tapez "lz-azure-rg", puis sélectionnez le projet "lz-azure-rg" : 
+Pour cela, dans le filtre, tapez `lz-azure-rg`, puis sélectionnez le projet `lz-azure-rg` : 
 
-IMAGE
+![](images/wizard_3.png)
 
 Définissez le nom de votre workspace : 
 
-IMAGE
+![](images/wizard_4.png)
 
 Attention, sur ce point, respectez la convention de nommage : `lz-azure-rg-<team>-<project>-<env>`
-<env> étant le type d'environnement que vous souhaitez déployer : 
+`<env>` étant le type d'environnement que vous souhaitez déployer : 
 
 * prod
 * dev
@@ -41,7 +41,7 @@ Il vous reste maintenant à définir quelques variables sur votre workspace qui 
 
 Pour créer des variables sur votre workspace, vous devrez accédez à votre workspace, puis cliquer sur le bouton "variables" : 
 
-IMAGE
+![](images/workspace_vars.png)
 
 Vous arriverez ainsi sur une page sur laquelle vous pouvez créer des variables qui vont être consommées par le module terraform de création de groupes de ressources.
 
