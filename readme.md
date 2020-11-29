@@ -16,4 +16,4 @@ Si vous n'avez pas de compte Terraform Cloud, nous vous invitons à vous rapproc
 
 ## Comment créer un nouveau groupe de ressources ? 
 
-Vous trouverez [ici]() la documentation qui présente comment consommer ce projet au travers la webui de Terraform Cloud.
+Vous trouverez [ici](https://gitlab.com/azure-acknowledge/terraform/modules/lz-azure-rg/-/tree/master/doc/user/rg_creation_with_ui) la documentation qui présente comment consommer ce projet au travers la webui de Terraform Cloud.
